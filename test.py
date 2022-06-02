@@ -2,6 +2,8 @@ import cv2
 import datetime
 import time
 
+
+#ーーーー顔認識ーーーーー
 face_cascade = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
 cap = cv2.VideoCapture(0)
 while True:
