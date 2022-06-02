@@ -10,8 +10,8 @@ while True:
   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
   faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
   for x, y, w, h in faces:
-    cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2).T
-    face = img[y: y + h, x: x + w]
+    # cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2).T
+    # face = img[y: y + h, x: x + w]
     face_gray = gray[y: y + h, x: x + w]
     cv2.putText(img, 'face detect', (20,50), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,0,200), 2, cv2.LINE_AA, cv2.imwrite(fileName, img))
     # time.sleep(3)
